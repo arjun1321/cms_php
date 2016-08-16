@@ -1,4 +1,4 @@
-<?php include "includes/header.php" ?>
+<?php include "includes/admin_header.php" ?>
 
     <div id="wrapper">
         
@@ -12,7 +12,7 @@
         
 
         <!-- Navigation -->
-        <?php include "includes/navigations.php" ?>   
+        <?php include "includes/admin_navigations.php" ?>   
 
         <div id="page-wrapper">
 
@@ -41,4 +41,4 @@
         
         <!-- /#page-wrapper -->
 
-    <?php include "includes/footer.php" ?>
+    <?php include "includes/admin_footer.php" ?>
