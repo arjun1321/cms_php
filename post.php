@@ -140,6 +140,11 @@
                 if(!$select_comment_query) {
                     die('Query Failed' . mysqli_error($connection));
                 }
+                
+                $query = "UPDATE posts SET post_comment_count = post_comment_count + 1";
+                $query .= "WHERE post_id = $the_post_id ";
+                $update_comment_count = mysqli_query($connection, $query);
+                
                 while($row = mysqli_fetch_array($select_comment_query)) {
                     $comment_date = $row['comment_date'];
                     $comment_content = $row['comment_content'];
