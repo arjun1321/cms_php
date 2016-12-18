@@ -4,7 +4,7 @@
         
        
         $user_firstname = $_POST['user_firstname'];
-        $user_lasttname = $_POST['user_lasttname'];
+        $user_lastname = $_POST['user_lastname'];
         $user_role = $_POST['user_role'];
         
         
@@ -18,17 +18,17 @@
 
         
         
-        move_uploaded_file($post_image_temp, "../images/$post_image");
+//        move_uploaded_file($post_image_temp, "../images/$post_image");
         
         
-        $query = "INSERT INTO posts(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_status) ";
+        $query = "INSERT INTO users(user_firstname, user_lastname, user_role, username, user_email, user_password) ";
         
-        $query .= "VALUES({$post_category_id}, '{$post_title}', '{$post_author}', now(), '{$post_image}', '{$post_content}', '{$post_tags}', '{$post_status}') ";
+        $query .= "VALUES('{$user_firstname}', '{$user_lastname}', '{$user_role}', '{$username}', '{$user_email}', '{$user_password}') ";
         
         
-        $create_post_query = mysqli_query($connection, $query);
+        $create_user_query = mysqli_query($connection, $query);
         
-        confirm($create_post_query);
+        confirm($create_user_query);
     }
 ?>
   
@@ -87,7 +87,7 @@
     
     <div class="form-group">
         <label for="post_content">Password</label>
-        <input type="email" class="form-control" name="user_password">
+        <input type="password" class="form-control" name="user_password">
     </div>
     
     <div class="form-group">
