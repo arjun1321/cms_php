@@ -93,22 +93,22 @@ if(isset($_GET['p_id'])) {
        
     <div class="form-group">
       
-       <select name="post_category" id="">
+       <select name="user_role" id="">
            
            <?php
            
-            $query = "SELECT * FROM categories";
-            $select_categories = mysqli_query($connection, $query);
+            $query = "SELECT * FROM users";
+            $select_users = mysqli_query($connection, $query);
            
-            confirm($select_categories);
+            confirm($select_users);
                                 
-            while($row = mysqli_fetch_assoc($select_categories)) {
+            while($row = mysqli_fetch_assoc($select_users)) {
                         
-            $cat_id = $row['cat_id'];
-            $cat_title = $row['cat_title'];
+            $user_id = $row['user_id'];
+            $user_role = $row['user_role'];
                 
                 
-            echo "<option value='$cat_id'>{$cat_title}</option>";
+            echo "<option value='$user_id'>{$user_role}</option>";
                 
                 
             }
