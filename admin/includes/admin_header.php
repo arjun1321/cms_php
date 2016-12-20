@@ -7,9 +7,13 @@
 
 <?php 
 
-    if(!isset($_SESSION['user_role'])) {
+    if(isset($_SESSION['user_role'])) {
         
-        header("Location: ../index.php ");
+        if($_SESSION['user_role' !== 'admin']) {
+        
+            header("Location: ../index.php ");
+            
+        }
     } 
 ?>
 
@@ -25,7 +29,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Admin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
