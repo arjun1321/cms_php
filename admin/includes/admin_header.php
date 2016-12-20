@@ -9,7 +9,7 @@
 
     if(isset($_SESSION['user_role'])) {
         
-        if($_SESSION['user_role' !== 'admin']) {
+        if($_SESSION['user_role'] !== 'admin') {
         
             header("Location: ../index.php ");
             
