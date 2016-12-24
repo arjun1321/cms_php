@@ -7,8 +7,10 @@
                                     <th>Lastname</th>
                                     <th>Email</th>
                                     <th>Role</th>
-                                    
-                                    
+                                    <th>Admin</th>
+                                    <th>Subscriber</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                             </thead>
                             
