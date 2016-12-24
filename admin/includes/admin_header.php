@@ -1,4 +1,5 @@
-<?php include "../includes/db.php" ?>
+<?php include "../includes/db.php"; ?>
+<?php include "./functions.php"; ?>
 
 <?php ob_start(); ?>
 
@@ -11,10 +12,12 @@
         
         if($_SESSION['user_role'] !== 'admin') {
         
-            header("Location: ../index.php ");
+            header("Location: ../index.php");
             
         }
-    } 
+    } else {
+        header("Location: ../index.php");
+    }
 ?>
 
 
