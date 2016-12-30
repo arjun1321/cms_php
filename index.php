@@ -36,12 +36,8 @@
                     $post_content = $row['post_content'];
                     $post_status = $row['post_status'];
                     
-                    if($post_status !== 'published') {
-                        
-                        echo "<h1 class='text-center'> NO POST SORRY </h1>";
-                    } else {
-                        
-                 
+                    if($post_status == 'published') {
+
                     ?>
                     
                     
