@@ -45,12 +45,12 @@
                                     </div>
                                     <div class="col-xs-9 text-right">
                                        
-<?php
-    $query = "SELECT * FROM posts";
-    $select_all_post = mysqli_query($connection, $query);
-    $post_counts = mysqli_num_rows($select_all_post);
-    echo "<div class='huge'>{$post_counts}</div>";
-?>          
+                                        <?php
+                                            $query = "SELECT * FROM posts";
+                                            $select_all_post = mysqli_query($connection, $query);
+                                            $post_counts = mysqli_num_rows($select_all_post);
+                                            echo "<div class='huge'>{$post_counts}</div>";
+                                        ?>          
                                         
                                         <div>Posts</div>
                                     </div>
@@ -73,12 +73,12 @@
                                         <i class="fa fa-comments fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-<?php
-    $query = "SELECT * FROM comments";
-    $select_all_comments = mysqli_query($connection, $query);
-    $comment_counts = mysqli_num_rows($select_all_comments);
-    echo "<div class='huge'>{$comment_counts}</div>";
-?> 
+                                        <?php
+                                            $query = "SELECT * FROM comments";
+                                            $select_all_comments = mysqli_query($connection, $query);
+                                            $comment_counts = mysqli_num_rows($select_all_comments);
+                                            echo "<div class='huge'>{$comment_counts}</div>";
+                                        ?> 
                                         <div>Comments</div>
                                     </div>
                                 </div>
@@ -100,12 +100,12 @@
                                         <i class="fa fa-user fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-<?php
-    $query = "SELECT * FROM users";
-    $select_all_users = mysqli_query($connection, $query);
-    $user_counts = mysqli_num_rows($select_all_users);
-    echo "<div class='huge'>{$user_counts}</div>";
-?>
+                                        <?php
+                                            $query = "SELECT * FROM users";
+                                            $select_all_users = mysqli_query($connection, $query);
+                                            $user_counts = mysqli_num_rows($select_all_users);
+                                            echo "<div class='huge'>{$user_counts}</div>";
+                                        ?>
                                         <div>Users</div>
                                     </div>
                                 </div>
@@ -127,12 +127,12 @@
                                         <i class="fa fa-list fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-<?php
-    $query = "SELECT * FROM categories";
-    $select_all_categories = mysqli_query($connection, $query);
-    $categorie_counts = mysqli_num_rows($select_all_categories);
-    echo "<div class='huge'>{$categorie_counts}</div>";
-?>
+                                        <?php
+                                            $query = "SELECT * FROM categories";
+                                            $select_all_categories = mysqli_query($connection, $query);
+                                            $categorie_counts = mysqli_num_rows($select_all_categories);
+                                            echo "<div class='huge'>{$categorie_counts}</div>";
+                                        ?>
                                         <div>Categories</div>
                                     </div>
                                 </div>
@@ -156,17 +156,21 @@
                       google.charts.setOnLoadCallback(drawChart);
                       function drawChart() {
                         var data = google.visualization.arrayToDataTable([
-                          ['Year', 'Sales', 'Expenses', 'Profit'],
-                          ['2014', 1000, 400, 200],
-                          ['2015', 1170, 460, 250],
-                          ['2016', 660, 1120, 300],
-                          ['2017', 1030, 540, 350]
+                          ['Data', 'Count'],
+                            
+                            <?php
+                                
+                                
+                            ?>
+                            
+                            
+                          ['Posts', 1000]
                         ]);
 
                         var options = {
                           chart: {
-                            title: 'Company Performance',
-                            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+                            title: '',
+                            subtitle: '',
                           }
                         };
 
@@ -176,7 +180,7 @@
                       }
                     </script>
                 
-                    <div id="columnchart_material" style="width: 900px; height: 500px;"></div>
+                    <div id="columnchart_material" style="width: 'auto'; height: 500px;"></div>
 
                 </div>
                 
