@@ -51,6 +51,8 @@
     <![endif]-->
     
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script src="js/script.js"></script>
 
 </head>
 
